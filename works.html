@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="こもがわスタジオの制作実績。発表会映像・飲食店PR動画・地域探訪など、地元に根ざした映像作品をご覧ください。" />
+  <title>WORKS – こもがわスタジオ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest:      '#0EA5E9',
+            forestlight: '#38BDF8',
+            cream:       '#F0F9FF',
+            parchment:   '#E0F2FE',
+            ink:         '#1A1A1A',
+            muted:       '#6B6560',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'Georgia', 'serif'],
+            sans:  ['"Noto Sans JP"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #FAFAF7; color: #1A1A1A; }
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 2px;
+      background: #0EA5E9;
+      margin: 10px auto 0;
+    }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    /* YouTube埋め込み比率 16:9 */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-ink">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="index.html" class="shrink-0">
+        <img src="assets/logo.png" alt="こもがわスタジオ" class="h-9 w-auto" />
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-7 text-sm font-medium">
+          <li><a href="index.html#service"  class="hover:text-forest transition-colors">SERVICE</a></li>
+          <li><a href="works.html"   class="text-forest font-bold border-b-2 border-forest pb-0.5">WORKS</a></li>
+          <li><a href="profile.html" class="hover:text-forest transition-colors">PROFILE</a></li>
+          <li>
+            <a href="index.html#contact"
+               class="bg-forest hover:bg-forestlight text-white px-5 py-2 rounded-full transition-colors font-bold text-sm">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="md:hidden p-2 flex flex-col gap-1.5" aria-label="メニュー"
+        onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <span class="block w-6 h-px bg-ink"></span>
+        <span class="block w-6 h-px bg-ink"></span>
+        <span class="block w-6 h-px bg-ink"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-gray-100 px-5 py-3 gap-0">
+      <a href="index.html#service" class="block py-3 text-sm border-b border-gray-100 hover:text-forest">SERVICE</a>
+      <a href="works.html"   class="block py-3 text-sm border-b border-gray-100 text-forest font-bold">WORKS</a>
+      <a href="profile.html" class="block py-3 text-sm border-b border-gray-100 hover:text-forest">PROFILE</a>
+      <a href="index.html#contact" class="block py-3 text-sm font-bold text-forest hover:text-forestlight">CONTACT</a>
+    </div>
+  </header>
+
+
+  <!-- PAGE HERO -->
+  <section class="bg-forest text-white py-14 md:py-20 px-5 text-center">
+    <h1 class="font-serif text-2xl md:text-4xl font-bold tracking-widest mb-3">WORKS</h1>
+    <p class="text-white/75 text-sm">制作実績</p>
+  </section>
+
+
+  <!-- WORKS GRID -->
+  <section class="py-16 md:py-24 px-5">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Work 1 -->
+        <div class="flex flex-col gap-4">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/RRCyVYABGxM"
+              title="ピアノ演奏会①"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <p class="text-xs text-muted uppercase tracking-wider mb-1">発表会映像</p>
+            <h2 class="font-bold text-base">ピアノ演奏会①</h2>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="flex flex-col gap-4">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/M5Bf8gN2qAs"
+              title="ピアノ演奏会②"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <p class="text-xs text-muted uppercase tracking-wider mb-1">発表会映像</p>
+            <h2 class="font-bold text-base">ピアノ演奏会②</h2>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="flex flex-col gap-4">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/Dwa7ZEnRos8"
+              title="奈良探訪 / 麺屋えぐち"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <p class="text-xs text-muted uppercase tracking-wider mb-1">SNSショート動画</p>
+            <h2 class="font-bold text-base">奈良探訪 / 麺屋えぐち</h2>
+          </div>
+        </div>
+
+        <!-- Work 4 -->
+        <div class="flex flex-col gap-4">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/5uozdMJH-mY"
+              title="奈良探訪 / つけ麺武者麺五條店"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <p class="text-xs text-muted uppercase tracking-wider mb-1">SNSショート動画</p>
+            <h2 class="font-bold text-base">奈良探訪 / つけ麺武者麺五條店</h2>
+          </div>
+        </div>
+
+        <!-- Work 5: Instagram -->
+        <div class="flex flex-col gap-4">
+          <a
+            href="https://www.instagram.com/p/C1_mmpHpRxg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block rounded-xl overflow-hidden bg-cream border border-parchment hover:shadow-lg transition-shadow"
+          >
+            <div class="aspect-video bg-parchment flex flex-col items-center justify-center gap-3 p-8">
+              <svg class="w-10 h-10 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+              </svg>
+              <p class="text-sm text-muted text-center">Instagramで見る</p>
+            </div>
+          </a>
+          <div>
+            <p class="text-xs text-muted uppercase tracking-wider mb-1">SNS動画</p>
+            <h2 class="font-bold text-base">ライダーズカフェヴィンテージ</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 text-center">
+        <p class="text-muted text-sm mb-5">映像制作のご依頼・ご相談はお気軽にどうぞ。</p>
+        <a href="index.html#contact"
+           class="inline-block bg-forest hover:bg-forestlight text-white font-bold py-3 px-10 rounded-full transition-colors text-sm shadow">
+          お問い合わせ・お見積りはこちら
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white pt-12 pb-8 px-5">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">
+        <div>
+          <img src="assets/logo.png" alt="こもがわスタジオ" class="h-8 w-auto mb-3 opacity-90" />
+          <p class="text-white/50 text-xs leading-relaxed">和歌山南紀・奈良を拠点とする<br />映像制作スタジオ</p>
+        </div>
+        <nav>
+          <ul class="flex flex-col gap-2.5 text-sm text-white/70">
+            <li><a href="index.html#service"  class="hover:text-white transition-colors">SERVICE</a></li>
+            <li><a href="works.html"          class="hover:text-white transition-colors">WORKS</a></li>
+            <li><a href="profile.html"        class="hover:text-white transition-colors">PROFILE</a></li>
+            <li><a href="index.html#contact"  class="hover:text-white transition-colors">CONTACT</a></li>
+            <li><a href="privacy.html"        class="hover:text-white transition-colors">PRIVACY POLICY</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Follow us</p>
+          <div class="flex flex-col gap-3">
+            <a href="https://www.instagram.com/komogawa_studio/" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/@%E3%81%93%E3%82%82%E3%81%8C%E3%82%8F%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA"
+               target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-white/30 text-xs border-t border-white/10 pt-6">
+        &copy; 2025 こもがわスタジオ. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

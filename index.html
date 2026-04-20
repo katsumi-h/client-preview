@@ -55,13 +55,19 @@
   <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
 
-      <a href="index.html" class="shrink-0">
-        <img src="assets/logo-illust.png" alt="こもがわスタジオ" class="h-9 w-auto" />
-      </a>
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="index.html" class="shrink-0">
+          <img src="assets/logo-illust.png" alt="こもがわスタジオ" class="h-11 w-auto" />
+        </a>
+        <div class="hidden sm:block leading-snug">
+          <p class="text-xs text-muted">和歌山県南紀・奈良県を拠点に活動する個人スタジオです。</p>
+          <p class="text-xs text-muted">地元の映像制作を、丁寧にお手伝いします。</p>
+        </div>
+      </div>
 
       <!-- PC ナビ -->
       <nav class="hidden md:block">
-        <ul class="flex items-center gap-7 text-sm font-medium">
+        <ul class="flex items-center gap-7 text-base font-medium">
           <li><a href="#service"  class="hover:text-forest transition-colors">SERVICE</a></li>
           <li><a href="works.html"   class="hover:text-forest transition-colors">WORKS</a></li>
           <li><a href="profile.html" class="hover:text-forest transition-colors">PROFILE</a></li>
@@ -99,37 +105,24 @@
 
 
   <!-- ========== HERO ========== -->
-  <section id="top" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <section id="top" class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
     <!-- 背景画像 -->
     <div
-      class="absolute inset-0 bg-cover bg-center"
-      style="background-image: url('assets/hero.jpg');"
+      class="absolute inset-0 bg-cover"
+      style="background-image: url('assets/hero.jpg'); background-position: center 25%;"
     ></div>
     <!-- オーバーレイ -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/35"></div>
 
     <!-- テキスト -->
     <div class="relative z-10 text-center text-white px-5 max-w-3xl mx-auto">
-      <!-- 地名バッジ -->
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2 mb-7">
-        <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-        <span class="text-sm md:text-base font-bold tracking-wide text-white">和歌山南紀・奈良</span>
-      </div>
       <h1 class="font-serif text-xl sm:text-3xl md:text-5xl font-bold leading-relaxed mb-7 whitespace-nowrap">
         きちんと撮る、残す、伝える。
       </h1>
-      <p class="text-sm md:text-base leading-loose text-white/85 mb-10">
-        <span class="font-bold text-white">和歌山南紀・奈良</span>を拠点に活動する個人スタジオです。<br />
+      <p class="text-sm md:text-base leading-loose text-white/85">
+        <span class="font-bold text-white">和歌山県南紀・奈良県</span>を拠点に活動する個人スタジオです。<br />
         地元の企業・施設・イベントの映像制作を、丁寧にお手伝いします。
       </p>
-      <a
-        href="#contact"
-        class="inline-block bg-white text-forest hover:bg-cream font-bold py-3.5 px-10 rounded-full transition-colors text-sm md:text-base shadow-lg"
-      >
-        お問い合わせ・お見積りはこちら
-      </a>
     </div>
   </section>
 
@@ -140,7 +133,13 @@
 
       <div class="text-center mb-14">
         <h2 class="font-serif text-2xl md:text-3xl font-bold tracking-widest section-heading">SERVICE</h2>
-        <p class="mt-5 text-muted text-sm">こんな映像、作っています</p>
+        <p class="mt-6 text-ink font-bold text-base md:text-lg leading-loose">
+          和歌山・奈良の映像制作、<br />プロに任せてみませんか？
+        </p>
+        <p class="mt-2 text-muted text-sm leading-loose">
+          テレビ局・映画制作の現場で磨いた技術で、<br />地元の企業・店舗・イベントの映像を形にします。
+        </p>
+        <p class="mt-5 text-muted text-sm">「こんな映像、作っています」</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -149,7 +148,7 @@
           <span class="text-2xl">📱</span>
           <h3 class="font-bold text-[15px]">SNSショート動画</h3>
           <p class="text-muted text-sm leading-relaxed flex-1">
-            集客や来店動機につながる短尺動画を制作します。飲食店・企業・店舗向け。
+            集客や来店動機につながるショート動画を制作します。飲食店・企業・店舗向け。
           </p>
           <p class="text-ink font-bold text-sm pt-3 border-t border-parchment">30,000円〜</p>
         </div>
@@ -167,7 +166,7 @@
           <span class="text-2xl">🎹</span>
           <h3 class="font-bold text-[15px]">発表会映像作品</h3>
           <p class="text-muted text-sm leading-relaxed flex-1">
-            ピアノ発表会・学校行事など、大切な場面を確実に記録します。
+            ピアノ発表会・バレエ・舞台など、大切な場面を確実に記録します。
             親御さんがお子様の晴れ舞台をしっかり鑑賞できるよう、撮影はお任せください。
           </p>
           <p class="text-ink font-bold text-sm pt-3 border-t border-parchment">60,000円〜</p>
@@ -179,7 +178,6 @@
           <p class="text-muted text-sm leading-relaxed flex-1">
             企画・撮影・編集などを含めたサポートを行います。詳しくはご相談ください。
           </p>
-          <p class="text-muted text-sm pt-3 border-t border-parchment">要お問い合わせ</p>
         </div>
 
         <div class="service-card bg-cream rounded-xl p-6 flex flex-col gap-3 border border-parchment">
@@ -188,16 +186,15 @@
           <p class="text-muted text-sm leading-relaxed flex-1">
             地域のイベントや催事など、内容に合わせてご相談ください。
           </p>
-          <p class="text-muted text-sm pt-3 border-t border-parchment">要お問い合わせ</p>
         </div>
 
         <div class="service-card bg-white rounded-xl p-6 flex flex-col gap-3 border border-gray-200">
           <span class="text-2xl">💬</span>
           <h3 class="font-bold text-[15px]">その他ご相談ください</h3>
           <p class="text-muted text-sm leading-relaxed flex-1">
-            上記以外のご依頼も、まずはお気軽にご相談ください。一緒に考えます。
+            上記以外のご依頼も、まずはお気軽にご相談ください。一緒に考えます。<br />
+            ご予算に応じた撮影内容のご提案もさせていただきます。
           </p>
-          <p class="text-muted text-sm pt-3 border-t border-gray-100">—</p>
         </div>
 
       </div>
@@ -210,12 +207,6 @@
     <p class="font-serif text-base md:text-xl leading-relaxed tracking-wide">
       和歌山県・奈良県・関西圏での撮影はお気軽にご相談ください。
     </p>
-    <a
-      href="#contact"
-      class="mt-6 inline-block border border-white/70 hover:bg-white hover:text-forest text-white font-bold py-2.5 px-8 rounded-full transition-colors text-sm"
-    >
-      まずは無料相談 →
-    </a>
   </section>
 
 
@@ -309,7 +300,7 @@
         <div>
           <img src="assets/logo.png" alt="こもがわスタジオ" class="h-8 w-auto mb-3 opacity-90" />
           <p class="text-white/50 text-xs leading-relaxed">
-            和歌山南紀・奈良を拠点とする<br />映像制作スタジオ
+            和歌山県南紀・奈良県を拠点とする<br />映像制作スタジオ
           </p>
         </div>
 

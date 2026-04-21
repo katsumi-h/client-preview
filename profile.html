@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="こもがわスタジオのプロフィール。和歌山南紀・奈良を拠点に、地域に根ざした映像制作をおこなう個人スタジオです。" />
+  <meta name="description" content="こもがわスタジオのプロフィール。和歌山県南紀・奈良県を拠点に、地域に根ざした映像制作をおこなう個人スタジオです。" />
   <title>PROFILE – こもがわスタジオ</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -42,6 +42,14 @@
     }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: flex; }
+    .page-header-waves {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
   </style>
 </head>
 
@@ -50,13 +58,19 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
-      <a href="index.html" class="shrink-0">
-        <img src="assets/logo.png" alt="こもがわスタジオ" class="h-9 w-auto" />
-      </a>
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="index.html" class="shrink-0">
+          <img src="assets/logo-illust.png" alt="こもがわスタジオ" class="h-11 w-auto" />
+        </a>
+        <div class="hidden sm:block leading-snug">
+          <p class="text-xs text-muted">和歌山県南紀・奈良県を拠点に活動する個人スタジオです。</p>
+          <p class="text-xs text-muted">地元の映像制作を、丁寧にお手伝いします。</p>
+        </div>
+      </div>
       <nav class="hidden md:block">
-        <ul class="flex items-center gap-7 text-sm font-medium">
-          <li><a href="index.html#service"  class="hover:text-forest transition-colors">SERVICE</a></li>
-          <li><a href="works.html"   class="hover:text-forest transition-colors">WORKS</a></li>
+        <ul class="flex items-center gap-7 text-base font-medium">
+          <li><a href="index.html#service" class="hover:text-forest transition-colors">SERVICE</a></li>
+          <li><a href="works.html" class="hover:text-forest transition-colors">WORKS</a></li>
           <li><a href="profile.html" class="text-forest font-bold border-b-2 border-forest pb-0.5">PROFILE</a></li>
           <li>
             <a href="index.html#contact"
@@ -75,7 +89,7 @@
     </div>
     <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-gray-100 px-5 py-3 gap-0">
       <a href="index.html#service" class="block py-3 text-sm border-b border-gray-100 hover:text-forest">SERVICE</a>
-      <a href="works.html"   class="block py-3 text-sm border-b border-gray-100 hover:text-forest">WORKS</a>
+      <a href="works.html" class="block py-3 text-sm border-b border-gray-100 hover:text-forest">WORKS</a>
       <a href="profile.html" class="block py-3 text-sm border-b border-gray-100 text-forest font-bold">PROFILE</a>
       <a href="index.html#contact" class="block py-3 text-sm font-bold text-forest hover:text-forestlight">CONTACT</a>
     </div>
@@ -83,164 +97,154 @@
 
 
   <!-- PAGE HERO -->
-  <section class="bg-forest text-white py-14 md:py-20 px-5 text-center">
-    <h1 class="font-serif text-2xl md:text-4xl font-bold tracking-widest mb-3">PROFILE</h1>
-    <p class="text-white/75 text-sm">スタジオについて</p>
+  <section class="bg-forest text-white py-14 md:py-20 px-5 text-center relative overflow-hidden">
+    <svg class="page-header-waves" viewBox="0 0 800 140" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 Q200,10 400,40 T800,40" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
+      <path d="M0,70 Q200,40 400,70 T800,70" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+      <path d="M0,100 Q200,70 400,100 T800,100" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none"/>
+    </svg>
+    <h1 class="relative z-10 font-serif text-2xl md:text-4xl font-bold tracking-widest mb-3">PROFILE</h1>
+    <p class="relative z-10 text-white/75 text-sm">スタジオについて</p>
   </section>
 
 
-  <!-- PROFILE 本文 -->
+  <!-- MAIN CONTENT -->
   <section class="py-16 md:py-24 px-5">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto flex flex-col gap-14">
 
-      <!-- ロゴ＋自己紹介 -->
-      <div class="flex flex-col items-center text-center mb-14">
-        <img src="assets/logo-illust.png" alt="こもがわスタジオ" class="h-24 w-auto mb-6" />
-        <h2 class="font-serif text-xl md:text-2xl font-bold mb-5">
-          街のビデオ屋さん、<br />こもがわスタジオです。
+      <!-- セクション1: こもがわスタジオについて -->
+      <div>
+        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-8">
+          こもがわスタジオについて
         </h2>
-        <p class="text-muted text-sm md:text-base leading-loose max-w-xl">
-          和歌山県南紀・奈良県を拠点に活動する、個人の映像制作スタジオです。
-          企業・店舗・施設・イベントなど、さまざまな場面の映像制作をお手伝いしています。
-          「きちんと撮る、残す、伝える。」を大切にしながら、
-          地域に根ざした、顔の見える制作を心がけています。
+        <p class="text-muted text-[15px] leading-[1.8] max-w-2xl mx-auto text-center">
+          和歌山県南紀・奈良県の2拠点を活動拠点とする、個人の映像制作スタジオです。テレビ局・映画の現場で長年培った技術と経験をもとに、地域の企業・店舗・イベント・発表会など、「大切な場面」の映像制作をお手伝いしています。
         </p>
       </div>
 
-      <!-- 区切り -->
-      <hr class="border-parchment mb-14" />
+      <hr class="border-parchment" />
 
-      <!-- 代表プロフィール -->
-      <div class="mb-16">
-        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-12">
-          代表プロフィール
+      <!-- セクション2: 映像制作へのスタンス -->
+      <div>
+        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-8">
+          映像制作へのスタンス
         </h2>
+        <p class="text-center font-serif text-xl md:text-2xl font-bold text-forest mb-6 leading-relaxed">
+          「きちんと撮る、残す、伝える。」
+        </p>
+        <p class="text-muted text-[15px] leading-[1.8] max-w-2xl mx-auto text-center">
+          雰囲気だけの映像ではなく、お客様にとって本当に記憶に残り、きちんと伝わる映像制作を目指しています。制作会社に頼むほどではないかも、と思っているご依頼こそ、ぜひご相談ください。フットワーク軽く、丁寧に対応します。
+        </p>
+      </div>
 
-        <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
-          <div class="mb-6 pb-6 border-b border-parchment">
-            <p class="text-xs text-muted uppercase tracking-wider mb-1.5">代表</p>
-            <h3 class="font-serif text-lg font-bold">
-              園田 朋樹
-              <span class="text-sm font-normal text-muted ml-2">（そのだ ともき）</span>
+      <hr class="border-parchment" />
+
+      <!-- セクション3: 経歴・実績 -->
+      <div>
+        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-10">
+          これまでの経歴・実績
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+          <div class="bg-cream rounded-xl p-6 border border-parchment">
+            <h3 class="font-bold text-[13px] text-forest uppercase tracking-wider mb-4 pb-3 border-b border-parchment">
+              テレビディレクター
             </h3>
+            <ul class="flex flex-col gap-2.5 text-[15px] text-muted leading-relaxed">
+              <li>朝日放送テレビ株式会社</li>
+              <li>関西テレビ報道株式会社</li>
+              <li>奈良テレビ放送株式会社</li>
+              <li>株式会社テレビ愛媛</li>
+            </ul>
           </div>
 
-          <p class="text-xs text-muted uppercase tracking-wider mb-5">経歴</p>
-          <ul class="flex flex-col gap-5 text-sm">
-            <li class="flex gap-4">
-              <span class="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-forest"></span>
-              <div>
-                <p class="font-medium mb-1">元キー局 報道・バラエティ番組ディレクター</p>
-                <p class="text-muted leading-relaxed">全国放送のキー局でテレビディレクターとして勤務。報道・バラエティ番組の企画・制作・演出を担当しました。</p>
-              </div>
-            </li>
-            <li class="flex gap-4">
-              <span class="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-forest"></span>
-              <div>
-                <p class="font-medium mb-1">映画・ドラマ助監督経験者</p>
-                <p class="text-muted leading-relaxed">映画・ドラマの現場で助監督を経験。映像制作の幅広いスキルと現場経験を持っています。</p>
-              </div>
-            </li>
-            <li class="flex gap-4">
-              <span class="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-forest"></span>
-              <div>
-                <p class="font-medium mb-1">こもがわスタジオ設立・独立（現在）</p>
-                <p class="text-muted leading-relaxed">和歌山県南紀・奈良県の二拠点を活動拠点として、個人映像スタジオとして独立。地元の企業・店舗・イベントに寄り添った制作を続けています。</p>
-              </div>
-            </li>
-          </ul>
+          <div class="bg-cream rounded-xl p-6 border border-parchment">
+            <h3 class="font-bold text-[13px] text-forest uppercase tracking-wider mb-4 pb-3 border-b border-parchment">
+              映画・テレビドラマ 助監督
+            </h3>
+            <ul class="flex flex-col gap-2.5 text-[15px] text-muted leading-relaxed">
+              <li>東映京都撮影所 ほか</li>
+            </ul>
+          </div>
+
+          <div class="bg-cream rounded-xl p-6 border border-parchment">
+            <h3 class="font-bold text-[13px] text-forest uppercase tracking-wider mb-4 pb-3 border-b border-parchment">
+              コンテンツ制作
+            </h3>
+            <ul class="flex flex-col gap-2.5 text-[15px] text-muted leading-relaxed">
+              <li>ライダーズカフェ ビンテージ</li>
+              <li>武者麺</li>
+              <li>カレーハウス峰</li>
+              <li>とんこつ愛があふれてるラーメンとりこ</li>
+              <li>奈良スバル自動車株式会社</li>
+              <li>麺屋えぐち</li>
+            </ul>
+          </div>
+
+          <div class="bg-cream rounded-xl p-6 border border-parchment">
+            <h3 class="font-bold text-[13px] text-forest uppercase tracking-wider mb-4 pb-3 border-b border-parchment">
+              その他
+            </h3>
+            <ul class="flex flex-col gap-2.5 text-[15px] text-muted leading-relaxed">
+              <li>ピアノ演奏会・民俗芸能</li>
+              <li>演劇・イベント撮影</li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
-      <!-- 区切り -->
-      <hr class="border-parchment mb-14" />
+      <hr class="border-parchment" />
 
-      <!-- 選ばれる理由（4つの強み） -->
-      <div class="mb-16">
-        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-12">
-          選ばれる理由
+      <!-- セクション4: 発表会・習い事の撮影について -->
+      <div>
+        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-8">
+          発表会・習い事の撮影について
         </h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-          <div class="bg-cream rounded-xl p-6 border border-parchment">
-            <p class="text-2xl mb-3">📍</p>
-            <h3 class="font-bold text-[15px] mb-2">地域に根ざした対応</h3>
-            <p class="text-muted text-sm leading-relaxed">
-              和歌山南紀・奈良をホームグラウンドとして活動しています。
-              地元をよく知るスタッフが対応するので、土地勘のある撮影・制作が可能です。
-            </p>
-          </div>
-
-          <div class="bg-cream rounded-xl p-6 border border-parchment">
-            <p class="text-2xl mb-3">🤝</p>
-            <h3 class="font-bold text-[15px] mb-2">丁寧なヒアリングと提案</h3>
-            <p class="text-muted text-sm leading-relaxed">
-              はじめての方でも安心してご相談いただけるよう、ご要望を丁寧にお聞きします。
-              「何を伝えたいか」から一緒に考えます。
-            </p>
-          </div>
-
-          <div class="bg-cream rounded-xl p-6 border border-parchment">
-            <p class="text-2xl mb-3">💴</p>
-            <h3 class="font-bold text-[15px] mb-2">わかりやすい料金体系</h3>
-            <p class="text-muted text-sm leading-relaxed">
-              主なサービスの目安価格を公開しています。
-              追加費用が発生する場合も事前にご説明しますので、安心してご依頼いただけます。
-            </p>
-          </div>
-
-          <div class="bg-cream rounded-xl p-6 border border-parchment">
-            <p class="text-2xl mb-3">⚡</p>
-            <h3 class="font-bold text-[15px] mb-2">フットワークの軽さ</h3>
-            <p class="text-muted text-sm leading-relaxed">
-              個人スタジオだからこそ、小さなご依頼にも柔軟に対応できます。
-              「こんなことできる？」という相談も、まずはお気軽にどうぞ。
-            </p>
-          </div>
-
+        <div class="bg-cream rounded-xl border border-parchment p-6 md:p-8 max-w-2xl mx-auto">
+          <p class="text-[15px] leading-[1.8] text-muted">
+            お子様の晴れ舞台は、撮影をこちらに任せて、ぜひ目の前の演奏・演技をしっかり楽しんでください。スマートフォンをかまえながらでは、なかなか集中できないものです。大切な記録は、プロにお任せください。
+          </p>
         </div>
       </div>
 
-      <!-- 基本情報 -->
-      <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
-        <h2 class="font-serif text-lg font-bold mb-6 pb-4 border-b border-parchment">スタジオ情報</h2>
-        <dl class="flex flex-col gap-4 text-sm">
-          <div class="flex flex-col sm:flex-row sm:gap-8">
-            <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">屋号</dt>
-            <dd>こもがわスタジオ</dd>
-          </div>
-          <div class="flex flex-col sm:flex-row sm:gap-8">
-            <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">活動拠点</dt>
-            <dd>和歌山県南紀・奈良県（関西圏全般に対応）</dd>
-          </div>
-          <div class="flex flex-col sm:flex-row sm:gap-8">
-            <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">対応業務</dt>
-            <dd>SNS動画・企業VP・発表会映像・YouTubeサポート・イベント撮影 ほか</dd>
-          </div>
-          <div class="flex flex-col sm:flex-row sm:gap-8">
-            <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">お問い合わせ</dt>
-            <dd>
-              <a href="index.html#contact"
-                 class="text-forest underline underline-offset-2 hover:text-forestlight transition-colors">
-                お問い合わせフォームへ
-              </a>
-            </dd>
-          </div>
-        </dl>
-      </div>
+      <hr class="border-parchment" />
 
-      <!-- CTA -->
-      <div class="mt-14 text-center">
-        <p class="text-muted text-sm mb-5">ご依頼・ご相談はお気軽にどうぞ。</p>
-        <a href="index.html#contact"
-           class="inline-block bg-forest hover:bg-forestlight text-white font-bold py-3 px-10 rounded-full transition-colors text-sm shadow">
-          お問い合わせ・お見積りはこちら
-        </a>
+      <!-- セクション5: スタジオ情報 -->
+      <div>
+        <h2 class="font-serif text-xl md:text-2xl font-bold text-center tracking-wide section-heading mb-8">
+          スタジオ情報
+        </h2>
+        <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 max-w-2xl mx-auto">
+          <dl class="flex flex-col gap-5 text-[15px]">
+            <div class="flex flex-col sm:flex-row sm:gap-8">
+              <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">屋号</dt>
+              <dd>こもがわスタジオ</dd>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:gap-8">
+              <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">活動拠点</dt>
+              <dd>和歌山県南紀・奈良県（関西圏全般に対応）</dd>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:gap-8">
+              <dt class="font-medium w-28 shrink-0 text-muted mb-1 sm:mb-0">対応業務</dt>
+              <dd>SNS動画・企業VP・発表会映像・YouTubeサポート・イベント撮影 ほか</dd>
+            </div>
+          </dl>
+        </div>
       </div>
 
     </div>
   </section>
+
+
+  <!-- CTA -->
+  <div class="py-14 px-5 text-center bg-white">
+    <p class="text-muted text-sm mb-5">ご依頼・ご相談はお気軽にどうぞ。</p>
+    <a href="index.html#contact"
+       class="inline-block bg-forest hover:bg-forestlight text-white font-bold py-3 px-10 rounded-full transition-colors text-sm shadow">
+      お問い合わせ・お見積りはこちら
+    </a>
+  </div>
 
 
   <!-- FOOTER -->
@@ -253,11 +257,11 @@
         </div>
         <nav>
           <ul class="flex flex-col gap-2.5 text-sm text-white/70">
-            <li><a href="index.html#service"  class="hover:text-white transition-colors">SERVICE</a></li>
-            <li><a href="works.html"          class="hover:text-white transition-colors">WORKS</a></li>
-            <li><a href="profile.html"        class="hover:text-white transition-colors">PROFILE</a></li>
-            <li><a href="index.html#contact"  class="hover:text-white transition-colors">CONTACT</a></li>
-            <li><a href="privacy.html"        class="hover:text-white transition-colors">PRIVACY POLICY</a></li>
+            <li><a href="index.html#service" class="hover:text-white transition-colors">SERVICE</a></li>
+            <li><a href="works.html"         class="hover:text-white transition-colors">WORKS</a></li>
+            <li><a href="profile.html"       class="hover:text-white transition-colors">PROFILE</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition-colors">CONTACT</a></li>
+            <li><a href="privacy.html"       class="hover:text-white transition-colors">PRIVACY POLICY</a></li>
           </ul>
         </nav>
         <div>
